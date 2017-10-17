@@ -1,9 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const utils = require('../utils.js');
 const commentController = require('../../db/controllers/comment.js');
-const userController = require('../../db/controllers/user.js');
-const mongoose = require('mongoose');
+
 
 // get all comments on a resource
 router.get('/:id', (req, res) => {
@@ -39,15 +37,15 @@ router.post('/', (req, res) => {
     });
 });
 
-router.delete('/', function (req, res) {
+router.delete('/', (req, res) => {
   commentController.deleteComment(req.body.commentId)
-  .then(function (response) {
+  .then((response) => {
     console.log(response);
     res.status(201).send(response);
   })
-  .catch(function (err) {
+  .catch((err) => {
     console.error(err);
-  })
+  });
 });
 
 

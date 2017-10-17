@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "engines": {
     "node": "8.4.0",
-    "npm": "5.5.1",
+    "npm": "5.5.1"
   },
   "description": "A user-driven app for rating and reviewing introductory coding resources.",
   "main": "index.js",
   "scripts": {
     "test": "mocha ./tests/server-spec.js",
-    "start": "webpack --watch & nodemon server/server.js",
+    "start": "webpack -p & node server/server.js",
     "build": "webpack -p"
   },
   "repository": {

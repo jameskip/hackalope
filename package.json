@@ -9,7 +9,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha ./tests/server-spec.js",
-    "start": "node server/server.js",
+    "start": "webpack & node server/server.js",
     "build": "webpack -p"
   },
   "repository": {
